@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=70" data-resource-id="newsGreen" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=70" data-resource-id="newsCampus" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=70" data-resource-id="newsAward" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=70" data-resource-id="hubYear" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=70" data-resource-id="hubRise" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=300&q=70" data-resource-id="hubBlr2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=70" data-resource-id="latest1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=700&q=70" data-resource-id="latest2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=70" data-resource-id="latest3" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=70" data-resource-id="joiner1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=70" data-resource-id="joiner2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=70" data-resource-id="awardee" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2400&q=70" data-resource-id="heroPhoto" />
+<meta name="ext-resource-dependency" content="uploads/Video_Banner-1_Ignite_Enduring_Change_720p.mp4" data-resource-id="heroVideo" />
+<template id="__bundler_thumbnail" data-bg-color="#c1121f">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#c1121f"/>
+  <circle cx="600" cy="360" r="150" fill="none" stroke="#ffffff" stroke-width="34"/>
+  <rect x="690" y="450" width="230" height="34" rx="17" transform="rotate(45 690 450)" fill="#ffffff"/>
+  <rect x="330" y="620" width="540" height="26" rx="13" fill="rgba(255,255,255,0.55)"/>
+</svg>
+</template>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#d6d3d1; }
+  a { color:#c1121f; text-decoration:none; }
+  a:hover { color:#8b0e17; text-decoration:underline; }
+  @keyframes tick { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+</style>
+</helmet>
+
+<section style="display:flex;flex-direction:row;align-items:flex-start;gap:0;padding:0;background:#ffffff;font-family:Manrope,system-ui,sans-serif">
+
+  <div id="1a" style="width:100%;max-width:1440px;margin:0 auto">
+    <div style="background:#ffffff;border-radius:0;overflow:hidden;box-shadow:none">
+
+      <div style="background:#c1121f;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;font:700 12px/1 'IBM Plex Mono',monospace;color:#fff">ST</div>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <span style="font:700 18px/1 Manrope,sans-serif;color:#fff;letter-spacing:-.01em">STTelemedia</span>
+            <span style="font:400 13px/1 Manrope,sans-serif;color:rgba(255,255,255,.85)">Global Data Centres</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:36px">
+          <div style="display:flex;align-items:center;gap:30px;font:600 13px/1 Manrope,sans-serif;letter-spacing:.06em;color:rgba(255,255,255,.82)">
+            <span style="color:#fff;padding-bottom:4px;border-bottom:2px solid #fff;cursor:pointer">HOME</span>
+            <span style="cursor:pointer" style-hover="color:#ffffff">KOSH</span>
+            <span style="cursor:pointer" style-hover="color:#ffffff">KOSH 2.0</span>
+            <span style="cursor:pointer" style-hover="color:#ffffff">INFOHUB</span>
+            <span style="cursor:pointer" style-hover="color:#ffffff">REPORTS</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding-left:28px;border-left:1px solid rgba(255,255,255,.28)">
+            <div style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font:600 11px/1 Manrope,sans-serif;color:#fff">AK</div>
+            <span style="font:500 13px/1 Manrope,sans-serif;color:#fff">Alex Kurian</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative;height:480px;background:#1c1917;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <div style="position:absolute;inset:0;overflow:hidden">
+          <video src="{{ videoSrc }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,17,.72) 0%,rgba(20,18,17,.55) 45%,rgba(20,18,17,.86) 100%)"></div>
+        </div>
+
+        <div style="position:relative;z-index:20;width:860px;display:flex;flex-direction:column;align-items:center;gap:26px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+            <span style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#f8b4ba">{{ greetingLabel }}</span>
+            <h1 style="margin:0;font:700 44px/1.1 Manrope,sans-serif;color:#fff;letter-spacing:-.02em;text-align:center">What are you looking for today?</h1>
+          </div>
+
+          <div style="display:flex;gap:4px;padding:4px;background:rgba(255,255,255,.12);border-radius:999px">
+            <sc-for list="{{ tabsA }}" as="t" hint-placeholder-count="5">
+              <div onClick="{{ t.on }}" style="cursor:pointer">
+                <sc-if value="{{ t.active }}" hint-placeholder-val="{{ true }}"><span style="display:block;padding:8px 18px;border-radius:999px;background:#fff;color:#1c1917;font:600 13px/1 Manrope,sans-serif">{{ t.name }}</span></sc-if>
+                <sc-if value="{{ t.inactive }}"><span style="display:block;padding:8px 18px;border-radius:999px;color:rgba(255,255,255,.82);font:500 13px/1 Manrope,sans-serif" style-hover="color:#ffffff">{{ t.name }}</span></sc-if>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="width:100%;position:relative">
+            <div style="display:flex;align-items:center;gap:16px;background:#fff;border-radius:14px;padding:0 20px;height:68px;box-shadow:0 18px 40px rgba(0,0,0,.35)">
+              <span style="font:400 20px/1 'IBM Plex Mono',monospace;color:#c1121f">⌕</span>
+              <input value="{{ qA }}" onChange="{{ onQA }}" onFocus="{{ openA }}" placeholder="Search people, documents, apps and news across STT GDC" style="flex:1;border:0;outline:none;font:400 17px/1 Manrope,sans-serif;color:#1c1917;background:transparent">
+              <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e;border:1px solid #e7e5e4;border-radius:5px;padding:6px 8px">CTRL K</span>
+              <button onClick="{{ openA }}" style="border:0;cursor:pointer;background:#c1121f;color:#fff;font:600 14px/1 Manrope,sans-serif;padding:14px 26px;border-radius:9px" style-hover="background:#8b0e17">Search</button>
+            </div>
+
+            <sc-if value="{{ isOpenA }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute;top:80px;left:0;right:0;background:#fff;border-radius:14px;box-shadow:0 26px 60px rgba(0,0,0,.32);overflow:hidden;text-align:left;z-index:5">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid #f4f4f3">
+                  <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#a8a29e">SUGGESTIONS</span>
+                  <span onClick="{{ closeA }}" style="font:500 12px/1 Manrope,sans-serif;color:#78716c;cursor:pointer">Esc to close</span>
+                </div>
+                <sc-for list="{{ sugA }}" as="s" hint-placeholder-count="4">
+                  <div style="display:flex;align-items:center;gap:16px;padding:14px 22px;border-bottom:1px solid #f7f7f6;cursor:pointer" style-hover="background:#fafaf9">
+                    <span style="width:58px;flex:0 0 auto;font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#c1121f">{{ s.kind }}</span>
+                    <div style="display:flex;flex-direction:column;gap:3px">
+                      <span style="font:600 15px/1.2 Manrope,sans-serif;color:#1c1917">{{ s.title }}</span>
+                      <span style="font:400 13px/1.3 Manrope,sans-serif;color:#78716c">{{ s.meta }}</span>
+                    </div>
+                  </div>
+                </sc-for>
+                <div style="display:flex;align-items:center;gap:12px;padding:14px 22px;background:#fafaf9">
+                  <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#a8a29e">RECENT</span>
+                  <span style="font:500 13px/1 Manrope,sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;border-radius:999px;padding:7px 14px;cursor:pointer">leave policy</span>
+                  <span style="font:500 13px/1 Manrope,sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;border-radius:999px;padding:7px 14px;cursor:pointer">Chennai DC 2 SOP</span>
+                  <span style="font:500 13px/1 Manrope,sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;border-radius:999px;padding:7px 14px;cursor:pointer">payslip</span>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#1c1917;height:52px;display:flex;align-items:center;overflow:hidden;padding:0 40px;gap:18px">
+        <span style="flex:0 0 auto;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f8b4ba">ANNOUNCEMENT</span>
+        <div style="flex:1;overflow:hidden;white-space:nowrap">
+          <div style="display:inline-flex;gap:56px;animation:tick 38s linear infinite;font:400 14px/1 Manrope,sans-serif;color:rgba(255,255,255,.9)">
+            <span>{{ tickerText }}</span>
+            <span>Quarterly town hall moves to 4 September, 3:00 PM IST.</span>
+            <span>{{ tickerText }}</span>
+            <span>Quarterly town hall moves to 4 September, 3:00 PM IST.</span>
+          </div>
+        </div>
+        <a href="#1a" style="flex:0 0 auto;font:600 13px/1 Manrope,sans-serif;color:#fff">Read more →</a>
+      </div>
+
+      <div style="padding:56px 40px;display:grid;grid-template-columns:1fr 400px;gap:40px">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Featured</h2>
+            <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">View all news</a>
+          </div>
+          <div style="border:1px solid #e7e5e4;border-radius:12px;overflow:hidden">
+            <div style="height:300px;overflow:hidden">
+              <img src="{{ heroNewsA.img }}" alt="" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="padding:26px 28px;display:flex;flex-direction:column;gap:12px">
+              <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c1121f">{{ heroNewsA.tag }}</span>
+              <h3 style="margin:0;font:700 26px/1.25 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em;text-wrap:pretty">{{ heroNewsA.title }}</h3>
+              <p style="margin:0;font:400 15px/1.6 Manrope,sans-serif;color:#57534e;max-width:64ch;text-wrap:pretty">{{ heroNewsA.body }}</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px">
+                <a href="#1a" style="font:600 14px/1 Manrope,sans-serif">Read more →</a>
+                <div style="display:flex;gap:8px">
+                  <sc-for list="{{ dotsA }}" as="d" hint-placeholder-count="3">
+                    <div onClick="{{ d.on }}" style="cursor:pointer;display:flex;align-items:center">
+                      <sc-if value="{{ d.active }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:22px;height:6px;border-radius:99px;background:#c1121f"></span></sc-if>
+                      <sc-if value="{{ d.inactive }}"><span style="display:block;width:6px;height:6px;border-radius:99px;background:#d6d3d1"></span></sc-if>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Today</h2>
+            <span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#78716c">25 AUG 2026</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ todayEvents }}" as="e" hint-placeholder-count="3">
+              <div style="display:flex;gap:16px;padding:18px;border:1px solid #e7e5e4;border-radius:12px;background:#fff" style-hover="border-color:#c1121f">
+                <div style="flex:0 0 auto;width:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fef2f2;border-radius:9px;padding:8px 0">
+                  <span style="font:700 20px/1 Manrope,sans-serif;color:#c1121f">{{ e.d }}</span>
+                  <span style="font:600 10px/1 'IBM Plex Mono',monospace;color:#c1121f;letter-spacing:.08em">{{ e.m }}</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <span style="font:600 15px/1.25 Manrope,sans-serif;color:#1c1917">{{ e.title }}</span>
+                  <span style="font:400 13px/1.4 Manrope,sans-serif;color:#78716c">{{ e.where }}</span>
+                  <span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#c1121f">{{ e.time }}</span>
+                </div>
+              </div>
+            </sc-for>
+            <a href="#1a" style="font:600 13px/1 Manrope,sans-serif;padding-top:4px">Open my calendar →</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:0 40px 56px;display:grid;grid-template-columns:1fr 400px;gap:40px">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">My Apps</h2>
+            <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">All applications</a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+            <sc-for list="{{ apps }}" as="a" hint-placeholder-count="8">
+              <div style="display:flex;flex-direction:column;gap:14px;padding:18px;border:1px solid #e7e5e4;border-radius:12px;cursor:pointer;background:#fff" style-hover="border-color:#c1121f;box-shadow:0 8px 20px rgba(28,25,23,.07)">
+                <div style="width:38px;height:38px;border-radius:9px;background:#fef2f2;display:flex;align-items:center;justify-content:center;font:600 12px/1 'IBM Plex Mono',monospace;color:#c1121f">{{ a.ab }}</div>
+                <span style="font:600 14px/1.35 Manrope,sans-serif;color:#1c1917">{{ a.name }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Info Hub</h2>
+            <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">View all</a>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ infoHub }}" as="i" hint-placeholder-count="3">
+              <div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f4f4f3;cursor:pointer">
+                <div style="flex:0 0 auto;width:74px;height:56px;border-radius:8px;overflow:hidden"><img src="{{ i.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font:600 14px/1.3 Manrope,sans-serif;color:#1c1917">{{ i.title }}</span>
+                  <span style="font:400 12px/1.45 Manrope,sans-serif;color:#78716c">{{ i.meta }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fafaf9;border-top:1px solid #f0efee;padding:56px 40px;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between">
+          <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Latest News</h2>
+          <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">Newsroom</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+          <sc-for list="{{ latestNews }}" as="n" hint-placeholder-count="3">
+            <div style="background:#fff;border:1px solid #e7e5e4;border-radius:12px;overflow:hidden;cursor:pointer" style-hover="box-shadow:0 12px 28px rgba(28,25,23,.09)">
+              <div style="height:150px;overflow:hidden"><img src="{{ n.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="padding:20px;display:flex;flex-direction:column;gap:9px">
+                <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c1121f">{{ n.tag }}</span>
+                <span style="font:700 17px/1.35 Manrope,sans-serif;color:#1c1917;text-wrap:pretty">{{ n.title }}</span>
+                <span style="font:400 13px/1.55 Manrope,sans-serif;color:#57534e;text-wrap:pretty">{{ n.body }}</span>
+                <span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#a8a29e;padding-top:4px">{{ n.date }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="padding:56px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px">
+        <div style="display:flex;flex-direction:column;gap:40px">
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between">
+              <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Rewards &amp; Recognition</h2>
+              <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">View all</a>
+            </div>
+            <div style="border:1px solid #e7e5e4;border-radius:12px;padding:28px;display:flex;gap:22px;align-items:center;background:#fff">
+              <div style="flex:0 0 auto;width:104px;height:104px;border-radius:50%;overflow:hidden;border:3px solid #fef2f2"><img src="{{ awardee.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c1121f">PLATINUM AWARD · Q2 FY27</span>
+                <span style="font:700 22px/1 Manrope,sans-serif;color:#1c1917">Deepa Nair</span>
+                <span style="font:500 14px/1 Manrope,sans-serif;color:#78716c">Systems Admin Analyst · Bengaluru</span>
+                <p style="margin:6px 0 0;font:400 14px/1.55 Manrope,sans-serif;color:#57534e;max-width:44ch;text-wrap:pretty">Recognised for leading the zero-downtime migration of the BLR2 monitoring stack.</p>
+                <button style="align-self:flex-start;margin-top:8px;border:1px solid #c1121f;background:#fff;color:#c1121f;font:600 13px/1 Manrope,sans-serif;padding:11px 20px;border-radius:8px;cursor:pointer" style-hover="background:#c1121f;color:#ffffff">Send greetings</button>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between">
+              <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">New Joiners</h2>
+              <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">View all</a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <sc-for list="{{ joiners }}" as="j" hint-placeholder-count="2">
+                <div style="border:1px solid #e7e5e4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:center;background:#fff">
+                  <div style="flex:0 0 auto;width:52px;height:52px;border-radius:50%;overflow:hidden"><img src="{{ j.img }}" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+                  <div style="display:flex;flex-direction:column;gap:4px">
+                    <span style="font:600 15px/1.2 Manrope,sans-serif;color:#1c1917">{{ j.name }}</span>
+                    <span style="font:400 12px/1.35 Manrope,sans-serif;color:#78716c">{{ j.role }}</span>
+                    <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#c1121f">{{ j.when }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <h2 style="margin:0;font:700 24px/1 Manrope,sans-serif;color:#1c1917;letter-spacing:-.01em">Event Calendar</h2>
+            <a href="#1a" style="font:600 13px/1 Manrope,sans-serif">Subscribe</a>
+          </div>
+          <div style="border:1px solid #e7e5e4;border-radius:12px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <span style="font:500 18px/1 Manrope,sans-serif;color:#a8a29e;cursor:pointer">←</span>
+              <span style="font:700 17px/1 Manrope,sans-serif;color:#1c1917">August 2026</span>
+              <span style="font:500 18px/1 Manrope,sans-serif;color:#a8a29e;cursor:pointer">→</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font:600 11px/1 'IBM Plex Mono',monospace;color:#a8a29e;text-align:center">
+              <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px">
+              <sc-for list="{{ calCells }}" as="c" hint-placeholder-count="35">
+                <div style="height:38px;display:flex;align-items:center;justify-content:center">
+                  <sc-if value="{{ c.today }}"><span style="width:32px;height:32px;border-radius:50%;background:#c1121f;color:#fff;display:flex;align-items:center;justify-content:center;font:600 13px/1 Manrope,sans-serif">{{ c.d }}</span></sc-if>
+                  <sc-if value="{{ c.marked }}"><span style="width:32px;height:32px;border-radius:50%;background:#fef2f2;color:#c1121f;display:flex;align-items:center;justify-content:center;font:600 13px/1 Manrope,sans-serif">{{ c.d }}</span></sc-if>
+                  <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}"><span style="font:500 13px/1 Manrope,sans-serif;color:#57534e">{{ c.d }}</span></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ upcoming }}" as="u" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid #e7e5e4;border-left:3px solid #c1121f;border-radius:10px;background:#fff">
+                <div style="flex:0 0 auto;width:44px;display:flex;flex-direction:column;align-items:center">
+                  <span style="font:700 19px/1 Manrope,sans-serif;color:#1c1917">{{ u.d }}</span>
+                  <span style="font:600 10px/1.6 'IBM Plex Mono',monospace;color:#78716c">{{ u.m }}</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font:600 15px/1.2 Manrope,sans-serif;color:#1c1917">{{ u.title }}</span>
+                  <span style="font:500 12px/1 'IBM Plex Mono',monospace;color:#c1121f">{{ u.time }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#1c1917;padding:52px 40px 32px;display:flex;flex-direction:column;gap:36px">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+          <sc-for list="{{ footerCols }}" as="f" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <span style="font:700 15px/1 Manrope,sans-serif;color:#fff">{{ f.head }}</span>
+              <sc-for list="{{ f.links }}" as="l" hint-placeholder-count="4">
+                <span style="font:400 13px/1 Manrope,sans-serif;color:rgba(255,255,255,.62);cursor:pointer" style-hover="color:#ffffff">{{ l }}</span>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12);padding-top:20px">
+          <span style="font:400 12px/1 Manrope,sans-serif;color:rgba(255,255,255,.45)">© 2026 ST Telemedia Global Data Centres India</span>
+          <div style="display:flex;gap:10px">
+            <span style="width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font:600 11px/1 'IBM Plex Mono',monospace;color:#fff;cursor:pointer">in</span>
+            <span style="width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font:600 11px/1 'IBM Plex Mono',monospace;color:#fff;cursor:pointer">f</span>
+            <span style="width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font:600 11px/1 'IBM Plex Mono',monospace;color:#fff;cursor:pointer">yt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;typeaheadOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Search&quot;},&quot;greeting&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Good morning, Alex&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;tickerText&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Mandatory information security refresher closes 31 August — 640 of 1,180 employees complete.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+const RES = (id, url) => (window.__resources && window.__resources[id]) || url;
+
+const SUG = [
+  { kind: 'PEOPLE', title: 'Deepa Nair', meta: 'Systems Admin Analyst · Bengaluru · ext 4412' },
+  { kind: 'DOCS', title: 'Data Centre Access Policy v4.2', meta: 'PDF · Updated 12 Aug 2026 · Security & Compliance' },
+  { kind: 'APPS', title: 'Operation KOSH 3.0', meta: 'Application · Operations · single sign-on' },
+  { kind: 'NEWS', title: 'STT GDC commissions second Mumbai campus', meta: 'Newsroom · 21 Aug 2026' },
+  { kind: 'DOCS', title: 'Travel & expense reimbursement form', meta: 'XLSX · Finance · India' },
+  { kind: 'PEOPLE', title: 'Arun Menon', meta: 'Lead Engineer, Critical Facilities · Chennai' },
+  { kind: 'APPS', title: 'Travel Self Booking Tool', meta: 'Application · Employee services' },
+  { kind: 'NEWS', title: 'Frost & Sullivan names STT GDC data centre operator of the year', meta: 'Newsroom · 09 Aug 2026' }
+];
+
+const TABS = ['All', 'People', 'Documents', 'Apps', 'News'];
+const KIND = { People: 'PEOPLE', Documents: 'DOCS', Apps: 'APPS', News: 'NEWS' };
+
+const NEWS = [
+  { tag: 'SUSTAINABILITY', title: 'Data centres turn to green energy to power new facilities', body: 'To reduce its carbon footprint, the India business has contracted 210 MW of renewable capacity across four states, covering the majority of load at the Mumbai and Pune campuses.', img: RES('newsGreen', 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=70') },
+  { tag: 'EXPANSION', title: 'Second Mumbai campus commissioned ahead of schedule', body: 'The 32 MW facility went live three weeks early, adding capacity for hyperscale customers in the western region and taking the national footprint past 300 MW.', img: RES('newsCampus', 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=70') },
+  { tag: 'RECOGNITION', title: 'Frost & Sullivan names STT GDC operator of the year', body: 'The award recognised sustained uptime performance, customer satisfaction scores and the pace of capacity delivery across the Indian portfolio.', img: RES('newsAward', 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=70') }
+];
+
+class Component extends DCLogic {
+  state = { qA: '', qB: '', tabA: 'All', tabB: 'All', openA: null, openB: null, slideA: 0, slideB: 1 };
+
+  isOpen(which) {
+    const s = this.state[which === 'A' ? 'openA' : 'openB'];
+    return s === null ? (this.props.typeaheadOpen ?? true) : s;
+  }
+
+  sugs(tab, q) {
+    const k = KIND[tab];
+    let out = k ? SUG.filter(s => s.kind === k) : SUG;
+    const t = q.trim().toLowerCase();
+    if (t) out = out.filter(s => (s.title + ' ' + s.meta).toLowerCase().includes(t));
+    return out.slice(0, 4);
+  }
+
+  tabs(which) {
+    const cur = this.state[which === 'A' ? 'tabA' : 'tabB'];
+    return TABS.map(name => ({
+      name, active: name === cur, inactive: name !== cur,
+      on: () => this.setState(which === 'A' ? { tabA: name } : { tabB: name })
+    }));
+  }
+
+  dots(which) {
+    const cur = this.state[which === 'A' ? 'slideA' : 'slideB'];
+    return NEWS.map((_, i) => ({
+      active: i === cur, inactive: i !== cur,
+      on: () => this.setState(which === 'A' ? { slideA: i } : { slideB: i })
+    }));
+  }
+
+  cal() {
+    const cells = [];
+    for (let i = 0; i < 6; i++) cells.push({ d: '', plain: false, today: false, marked: false });
+    const marked = [4, 12, 20, 28];
+    for (let d = 1; d <= 31; d++) {
+      const today = d === 25, mark = !today && marked.includes(d);
+      cells.push({ d: String(d), today, marked: mark, plain: !today && !mark });
+    }
+    return cells;
+  }
+
+  renderVals() {
+    const hour = new Date().getHours();
+    return {
+      greetingLabel: this.props.greeting ?? (hour < 12 ? 'Good morning, Alex' : hour < 17 ? 'Good afternoon, Alex' : 'Good evening, Alex'),
+      tickerText: this.props.tickerText ?? 'Mandatory information security refresher closes 31 August — 640 of 1,180 employees complete.',
+      qA: this.state.qA, qB: this.state.qB,
+      onQA: e => this.setState({ qA: e.target.value, openA: true }),
+      onQB: e => this.setState({ qB: e.target.value, openB: true }),
+      openA: () => this.setState({ openA: true }),
+      openB: () => this.setState({ openB: true }),
+      closeA: () => this.setState({ openA: false }),
+      closeB: () => this.setState({ openB: false }),
+      isOpenA: this.isOpen('A'), isOpenB: this.isOpen('B'),
+      sugA: this.sugs(this.state.tabA, this.state.qA),
+      sugB: this.sugs(this.state.tabB, this.state.qB),
+      tabsA: this.tabs('A'), tabsB: this.tabs('B'),
+      dotsA: this.dots('A'), dotsB: this.dots('B'),
+      heroNewsA: NEWS[this.state.slideA], heroNewsB: NEWS[this.state.slideB],
+      todayEvents: [
+        { d: '25', m: 'AUG', title: 'MS Teams operations review', where: 'Microsoft Teams · Ops leadership', time: '02:00 PM – 04:00 PM' },
+        { d: '25', m: 'AUG', title: 'Leadership meet — H2 outlook', where: 'Bengaluru HQ, Level 6', time: '05:00 PM – 06:00 PM' },
+        { d: '25', m: 'AUG', title: 'Security awareness drop-in', where: 'Teams · optional', time: '06:30 PM – 07:00 PM' }
+      ],
+      apps: [
+        { ab: 'MT', name: 'Mandatory Training' }, { ab: 'SP', name: 'Self Password' },
+        { ab: 'SF', name: 'SAP FIORI Production' }, { ab: 'UP', name: 'Update Password' },
+        { ab: 'TB', name: 'Travel Self Booking' }, { ab: 'SN', name: 'Service Now' },
+        { ab: 'K3', name: 'Operation KOSH 3.0' }, { ab: 'SL', name: 'Sales Force' }
+      ],
+      infoHub: [
+        { title: 'The Global Data Centres year in review', meta: 'Long read · 8 min · Strategy', img: RES('hubYear', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=70') },
+        { title: 'The rapid rise of STT GDC India', meta: 'Long read · 6 min · Growth', img: RES('hubRise', 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=70') },
+        { title: 'Inside the BLR2 monitoring upgrade', meta: 'Engineering note · 4 min', img: RES('hubBlr2', 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=300&q=70') }
+      ],
+      latestNews: [
+        { tag: 'AWARDS', title: 'Frost & Sullivan judged STT GDC India best in class', body: 'Winners of the 16th edition of the India ICT awards were announced in New Delhi, with the operator recognised across two categories.', date: '09 AUG 2026', img: RES('latest1', 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=70') },
+        { tag: 'CUSTOMERS', title: 'WebScale demand accelerates in Bengaluru', body: 'New capacity at the Bengaluru campus will support hyperscale demand in India’s fastest-growing market.', date: '31 JUL 2026', img: RES('latest2', 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=700&q=70') },
+        { tag: 'PEOPLE', title: 'From boring to booming: careers in critical facilities', body: 'Three engineers describe how the operations track has changed over five years of expansion.', date: '22 JUL 2026', img: RES('latest3', 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=70') }
+      ],
+      joiners: [
+        { name: 'Talan Gouse', role: 'Software Developer · Digital', when: 'Joined 18 Aug', img: RES('joiner1', 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=70') },
+        { name: 'Meera Iyer', role: 'Facilities Engineer · Pune', when: 'Joined 18 Aug', img: RES('joiner2', 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=70') }
+      ],
+      awardee: { img: RES('awardee', 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=70') },
+      videoSrc: RES('heroVideo', 'uploads/Video_Banner-1_Ignite_Enduring_Change_720p.mp4'),
+      heroPhoto: RES('heroPhoto', 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2400&q=70'),
+      calCells: this.cal(),
+      upcoming: [
+        { d: '06', m: 'SEP', title: 'MS Teams operations review', time: '02:00 PM – 04:00 PM' },
+        { d: '12', m: 'SEP', title: 'Annual meet 2026', time: '09:00 AM – 04:00 PM' },
+        { d: '20', m: 'SEP', title: 'Leadership meet', time: '10:00 AM – 04:00 PM' },
+        { d: '28', m: 'SEP', title: 'Quarterly town hall', time: '03:00 PM – 04:30 PM' }
+      ],
+      footerCols: [
+        { head: 'News & Publications', links: ['Ahmedabad', 'Bengaluru', 'Chennai', 'Delhi', 'Hyderabad', 'Kolkata', 'Mumbai', 'Pune'] },
+        { head: 'Media', links: ['News', 'Press releases', 'Media kit'] },
+        { head: 'Resources', links: ['Brochures', 'Factsheets', 'STT internet site', 'Policy library'] },
+        { head: 'Contact Us', links: ['contact@sttelemediagdc.in', 'IT helpdesk · ext 1800', 'HR connect'] }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

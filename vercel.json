@@ -1,0 +1,14 @@
+﻿{
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/STT GDC Digital Workplace.dc.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}

@@ -1067,7 +1067,7 @@ const ROLES = [
 class Component extends DCLogic {
   state = {
     screen: 'home', slide: 0, searchOpen: false, q: '',
-    view: 'mine', ai: false, faqOpen: 0, appQ: '', vote: -1
+    view: 'mine', ai: false, faqOpen: 0, appQ: '', vote: -1, infoTab: 'All'
   };
 
   componentDidMount() {
@@ -1088,9 +1088,16 @@ class Component extends DCLogic {
     const s = SLIDES[st.slide];
     const showAi = this.props.showAssistant !== false;
 
-    const nav = ['HOME', 'KOSH 2.0', 'INFOHUB', 'EVENTS', 'APPS', 'REPORTS'].map(label => {
-      const active = (label === 'HOME' && st.screen === 'home') || (label === 'EVENTS' && st.screen === 'event') || (label === 'APPS' && st.screen === 'apps') || (label === 'INFOHUB' && st.screen === 'infohub');
-      const on = label === 'EVENTS' ? this.go('event') : label === 'APPS' ? this.go('apps') : label === 'INFOHUB' ? this.go('infohub') : this.go('home');
+    const nav = [
+      { label: 'HOME', screen: 'home' },
+      { label: 'KOSH 2.0', screen: 'kosh' },
+      { label: 'INFOHUB', screen: 'infohub' },
+      { label: 'EVENTS', screen: 'event' },
+      { label: 'APPS', screen: 'apps' },
+      { label: 'REPORTS', screen: 'reports' }
+    ].map(({ label, screen }) => {
+      const active = st.screen === screen;
+      const on = screen === 'kosh' ? this.go('infohub') : screen === 'reports' ? this.go('apps') : this.go(screen);
       return { label, active, inactive: !active, on };
     });
 
@@ -1242,8 +1249,11 @@ class Component extends DCLogic {
         { stat: '4th', label: 'LEED Gold facility in India' }
       ],
 
-      infoTabs: ['All', 'Strategy', 'People', 'Operations', 'Sustainability', 'Governance'].map((label, i) => ({
-        label, active: i === 0, inactive: i !== 0, on: () => {}
+      infoTabs: ['All', 'Strategy', 'People', 'Operations', 'Sustainability', 'Governance'].map(label => ({
+        label,
+        active: (st.infoTab || 'All') === label,
+        inactive: (st.infoTab || 'All') !== label,
+        on: () => this.setState({ infoTab: label })
       })),
 
       infoArticles: [

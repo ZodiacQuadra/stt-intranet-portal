@@ -499,6 +499,60 @@
           </div>
         </div>
 
+        <!-- Celebrations & Milestones Widget -->
+        <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column">
+          <div style="padding:20px 22px 14px;display:flex;flex-direction:column;gap:13px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#3a0067">PEOPLE &amp; CULTURE</span>
+                <span style="font:700 17px/1 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.01em;color:#1c1917">Celebrations</span>
+              </div>
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#a8a29e">{{ wishMeta }}</span>
+            </div>
+            
+            <!-- Scope Tabs (Today / This week) -->
+            <div style="display:flex;gap:7px">
+              <sc-for list="{{ celebTabs }}" as="t" hint-placeholder-count="2">
+                <div onClick="{{ t.on }}" style="cursor:pointer">
+                  <sc-if value="{{ t.active }}" hint-placeholder-val="{{ true }}"><span style="display:block;padding:6px 14px;border-radius:999px;background:#1c1917;color:#fff;font:600 11px/1 'Plus Jakarta Sans',sans-serif">{{ t.label }}</span></sc-if>
+                  <sc-if value="{{ t.inactive }}"><span style="display:block;padding:6px 14px;border-radius:999px;background:#f5f5f4;color:#78716c;font:500 11px/1 'Plus Jakarta Sans',sans-serif" style-hover="background:#ebe9e7">{{ t.label }}</span></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="padding:0 22px 12px;display:flex;flex-direction:column">
+            <sc-for list="{{ celebrations }}" as="c" hint-placeholder-count="3">
+              <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #f4f4f3">
+                <div style="width:40px;height:40px;border-radius:50%;flex:0 0 auto;background-color:#e7e5e4;background-image:url({{ c.img }});background-size:cover;background-position:center;border:1px solid #f0efee"></div>
+                
+                <div style="display:flex;flex-direction:column;gap:3px;min-width:0;flex:1">
+                  <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+                    <span style="font:600 13px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917">{{ c.name }}</span>
+                    <span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#3a0067;background:#f0e6ff;padding:3px 6px;border-radius:4px">{{ c.kind }}</span>
+                  </div>
+                  <span style="font:400 11.5px/1.3 'Plus Jakarta Sans',sans-serif;color:#57534e">{{ c.note }}</span>
+                  <span style="font:400 10.5px/1 'IBM Plex Mono',monospace;color:#a8a29e">{{ c.role }}</span>
+                </div>
+
+                <div onClick="{{ c.on }}" style="flex:0 0 auto;cursor:pointer">
+                  <sc-if value="{{ c.notWished }}" hint-placeholder-val="{{ true }}">
+                    <span style="display:inline-block;padding:6px 11px;border-radius:8px;border:1px solid #d8b4fe;background:#fbf8ff;color:#3a0067;font:600 11px/1 'Plus Jakarta Sans',sans-serif;transition:all .18s ease" style-hover="background:#3a0067;color:#fff;border-color:#3a0067">{{ c.wishLabel }}</span>
+                  </sc-if>
+                  <sc-if value="{{ c.isWished }}">
+                    <span style="display:inline-block;padding:6px 11px;border-radius:8px;background:#f0fdf4;border:1px solid #86efac;color:#166534;font:600 11px/1 'Plus Jakarta Sans',sans-serif">Sent ✓</span>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="padding:13px 22px;background:#fafaf9;border-top:1px solid #f4f4f3;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all .18s ease" style-hover="background:#f5f5f4">
+            <span style="font:600 12px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">Send greetings &amp; e-cards</span>
+            <span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">→</span>
+          </div>
+        </div>
+
       </div>
     </div>
 

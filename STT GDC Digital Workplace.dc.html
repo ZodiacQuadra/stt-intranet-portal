@@ -227,6 +227,84 @@
 
         <div style="height:1px;background:#ebe9e7;margin:14px 0 4px"></div>
 
+        <!-- INFOHUB KNOWLEDGE & INSIGHTS (Executive Briefing Deck - Distinct from News & Highlights) -->
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <!-- Section Header -->
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <img src="logos/infohub.png" style="width:20px;height:20px;object-fit:contain" alt="InfoHub">
+                <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">INFOHUB · KNOWLEDGE REPOSITORY</span>
+              </div>
+              <h2 style="margin:0;font:800 25px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917">Organizational Knowledge &amp; Briefings</h2>
+            </div>
+            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#3a0067;padding:8px 14px;border-radius:8px;background:#f0e6ff;transition:all .18s ease" style-hover="background:#e4d2fc;transform:translateX(2px)">
+              <span style="font:700 12px/1 'Plus Jakarta Sans',sans-serif">Explore InfoHub</span>
+              <span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif">→</span>
+            </div>
+          </div>
+
+          <!-- Category Quick Filter Pills -->
+          <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px">
+            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#1c1917;color:#fff;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto">
+              <span>All Knowledge</span>
+            </div>
+            <div onClick="{{ goInfoStrategy }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#3a0067">◎</span>
+              <span>Strategy</span>
+            </div>
+            <div onClick="{{ goInfoOperations }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#0284c7">▦</span>
+              <span>Operations</span>
+            </div>
+            <div onClick="{{ goInfoSustainability }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#16a34a">◈</span>
+              <span>Sustainability</span>
+            </div>
+            <div onClick="{{ goInfoPeople }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#9333ea">◉</span>
+              <span>People</span>
+            </div>
+          </div>
+
+          <!-- 2x2 Knowledge Bento Grid (Document / Intelligence Brief Cards) -->
+          <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:16px">
+            <sc-for list="{{ homeInfoBriefs }}" as="b" hint-placeholder-count="4">
+              <div onClick="{{ b.onOpen }}" style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;padding:20px 22px;display:flex;flex-direction:column;gap:12px;cursor:pointer;position:relative;transition:all .22s ease" style-hover="transform:translateY(-3px);border-color:#3a0067;box-shadow:0 12px 28px rgba(58,0,103,.09)">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                  <div style="display:flex;align-items:center;gap:7px">
+                    <span style="width:24px;height:24px;border-radius:6px;background:{{ b.categoryBg }};color:{{ b.categoryColor }};display:flex;align-items:center;justify-content:center;font:500 12px/1 'IBM Plex Mono',monospace">{{ b.icon }}</span>
+                    <span style="font:700 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:{{ b.categoryColor }}">{{ b.category }}</span>
+                  </div>
+                  <span style="font:700 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;background:{{ b.badgeBg }};color:{{ b.badgeColor }};padding:4px 8px;border-radius:5px">{{ b.badge }}</span>
+                </div>
+                <h4 style="margin:0;font:700 15px/1.35 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;color:#1c1917">{{ b.title }}</h4>
+                <p style="margin:0;font:400 12.5px/1.55 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ b.summary }}</p>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid #f4f4f3;margin-top:auto">
+                  <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e">{{ b.meta }}</span>
+                  <span style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">Read brief →</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <!-- Quick Repository Launcher Strip -->
+          <div style="border:1px solid #e7e5e4;border-radius:12px;background:linear-gradient(135deg, #faf5ff 0%, #fff 100%);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#3a0067">KEY POLICIES:</span>
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">InfoSec v4.2</span>
+                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Travel Guidelines</span>
+                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Hybrid Framework</span>
+                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Data Classification</span>
+              </div>
+            </div>
+            <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer;white-space:nowrap" style-hover="text-decoration:underline">Search 200+ docs in InfoHub →</span>
+          </div>
+        </div>
+
+        <div style="height:1px;background:#ebe9e7;margin:14px 0 4px"></div>
+
         <div style="display:flex;align-items:flex-end;justify-content:space-between">
           <div style="display:flex;flex-direction:column;gap:7px">
             <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">MY APPS</span>
@@ -832,32 +910,6 @@
           </div>
         </sc-if>
 
-        <!-- Policy & Governance -->
-        <div style="display:flex;flex-direction:column;gap:18px">
-          <div style="display:flex;align-items:flex-end;justify-content:space-between">
-            <div style="display:flex;flex-direction:column;gap:7px">
-              <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">GOVERNANCE</span>
-              <h2 style="margin:0;font:800 24px/1.15 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917">Policy &amp; Governance Updates</h2>
-            </div>
-            <span style="font:600 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer" style-hover="text-decoration:underline">Policy Library →</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <sc-for list="{{ infoHubPolicies }}" as="p" hint-placeholder-count="4">
-              <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;padding:20px 22px;display:flex;align-items:flex-start;gap:16px;cursor:pointer;transition:all .2s ease" style-hover="transform:translateX(4px);border-color:#3a0067;box-shadow:0 6px 20px rgba(58,0,103,.08)">
-                <div style="width:40px;height:40px;border-radius:10px;background:#f0e6ff;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:500 14px/1 'IBM Plex Mono',monospace;color:#3a0067">▸</div>
-                <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
-                  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-                    <span style="font:700 14px/1.35 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917">{{ p.title }}</span>
-                    <sc-if value="{{ p.urgent }}"><span style="font:700 9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;background:#fef2f2;color:#dc2626;border:1px solid #fee2e2;padding:4px 8px;border-radius:5px">ACTION REQUIRED</span></sc-if>
-                  </div>
-                  <span style="font:400 12.5px/1.55 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e">{{ p.meta }}</span>
-                </div>
-                <span style="font:600 11px/1 'IBM Plex Mono',monospace;color:#78716c;flex:0 0 auto">{{ p.date }}</span>
-              </div>
-            </sc-for>
-          </div>
-        </div>
-
       </div>
 
       <!-- Right Sidebar -->
@@ -910,17 +962,6 @@
                 </div>
               </div>
             </sc-for>
-          </div>
-        </div>
-
-        <!-- Newsletter signup -->
-        <div style="border-radius:16px;background:linear-gradient(145deg, #3a0067 0%, #20003b 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 28px rgba(58,0,103,.24);position:relative;overflow:hidden;padding:26px;display:flex;flex-direction:column;gap:14px">
-          <div style="position:absolute;top:-30px;right:-30px;width:110px;height:110px;border-radius:50%;background:rgba(168,85,247,.22);filter:blur(24px);pointer-events:none"></div>
-          <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.75)">INFOHUB DIGEST</span>
-          <p style="margin:0;font:700 16px/1.4 'Plus Jakarta Sans',Manrope,sans-serif;color:#fff">Get the weekly InfoHub digest delivered to your inbox.</p>
-          <div style="display:flex;gap:8px">
-            <span style="flex:1;display:block;text-align:center;padding:12px 0;border-radius:8px;background:#fff;color:#3a0067;font:700 13px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .18s ease" style-hover="background:#f0e6ff;box-shadow:0 6px 16px rgba(0,0,0,.2)">Subscribe</span>
-            <span style="display:block;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.85);font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:all .18s ease" style-hover="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)">Manage</span>
           </div>
         </div>
 
@@ -1208,6 +1249,64 @@ class Component extends DCLogic {
     return {
       isHome: st.screen === 'home', isEvent: st.screen === 'event', isApps: st.screen === 'apps', isInfoHub: st.screen === 'infohub',
       goHome: this.go('home'), goEvent: this.go('event'), goApps: this.go('apps'), goInfoHub: this.go('infohub'),
+      goInfoStrategy: () => this.setState({ screen: 'infohub', infoTab: 'Strategy', infoQ: '' }),
+      goInfoOperations: () => this.setState({ screen: 'infohub', infoTab: 'Operations', infoQ: '' }),
+      goInfoSustainability: () => this.setState({ screen: 'infohub', infoTab: 'Sustainability', infoQ: '' }),
+      goInfoPeople: () => this.setState({ screen: 'infohub', infoTab: 'People', infoQ: '' }),
+      homeInfoBriefs: [
+        {
+          category: 'STRATEGY',
+          categoryColor: '#3a0067',
+          categoryBg: '#f0e6ff',
+          badge: '32 MW CAPACITY',
+          badgeColor: '#1e1b4b',
+          badgeBg: '#e0e7ff',
+          icon: '◎',
+          title: 'Hyperscale deal signed for Johor phase two',
+          summary: 'Strategic hyperscaler commits 32 MW across two halls, accelerating regional leadership in ASEAN corridor.',
+          meta: 'Commercial · 4 min read',
+          onOpen: () => this.setState({ screen: 'infohub', infoTab: 'Strategy', infoQ: '' })
+        },
+        {
+          category: 'OPERATIONS',
+          categoryColor: '#0369a1',
+          categoryBg: '#e0f2fe',
+          badge: 'LEED GOLD',
+          badgeColor: '#064e3b',
+          badgeBg: '#d1fae5',
+          icon: '▦',
+          title: 'Mumbai DC3 achieves LEED Gold certification',
+          summary: 'Recognised for high-efficiency liquid chillers and sustainable site design, setting a new benchmark for Indian data centres.',
+          meta: 'Facilities · 2 min read',
+          onOpen: () => this.setState({ screen: 'infohub', infoTab: 'Operations', infoQ: '' })
+        },
+        {
+          category: 'SUSTAINABILITY',
+          categoryColor: '#15803d',
+          categoryBg: '#dcfce7',
+          badge: '-60% DRAW',
+          badgeColor: '#14532d',
+          badgeBg: '#bbf7d0',
+          icon: '◈',
+          title: 'Water reuse programme hits 60% target early',
+          summary: 'Advanced closed-loop water treatment reduces municipal potable water consumption across five India campuses.',
+          meta: 'ESG · 5 min read',
+          onOpen: () => this.setState({ screen: 'infohub', infoTab: 'Sustainability', infoQ: '' })
+        },
+        {
+          category: 'PEOPLE',
+          categoryColor: '#7e22ce',
+          categoryBg: '#f3e8ff',
+          badge: '140+ COHORT',
+          badgeColor: '#581c87',
+          badgeBg: '#f5d0fe',
+          icon: '◉',
+          title: 'Graduate cohort 2026 joins across six markets',
+          summary: 'Comprehensive engineering onboarding and rotational leadership curriculum initiated across Singapore, India, and UK.',
+          meta: 'HR · 3 min read',
+          onOpen: () => this.setState({ screen: 'infohub', infoTab: 'People', infoQ: '' })
+        }
+      ],
       nav, scopes, sug, q: st.q,
       onQ: e => this.setState({ q: e.target.value, searchOpen: true }),
       openSearch: () => this.setState({ searchOpen: true }),

@@ -728,25 +728,39 @@
   <div>
 
     <!-- InfoHub Hero Header -->
-    <div style="background:#3a0067;padding:48px 48px 52px">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px">
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.6)">STT GDC INTERNAL</span>
-          <h1 style="margin:0;font:800 42px/1.1 Manrope,sans-serif;color:#fff;letter-spacing:-.025em">InfoHub</h1>
-          <p style="margin:0;font:400 16px/1.55 Manrope,sans-serif;color:rgba(255,255,255,.75);max-width:540px">Your central source for company news, policies, governance updates, and knowledge resources across STT GDC.</p>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:10px;height:44px;padding:0 16px;width:300px">
-          <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.7)">⌕</span>
-          <input placeholder="Search InfoHub…" style="flex:1;border:0;outline:none;background:transparent;font:400 14px/1 Manrope,sans-serif;color:#fff" />
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <sc-for list="{{ infoTabs }}" as="t" hint-placeholder-count="5">
-          <div onClick="{{ t.on }}" style="cursor:pointer">
-            <sc-if value="{{ t.active }}" hint-placeholder-val="{{ true }}"><span style="display:block;padding:8px 18px;border-radius:999px;background:#fff;color:#3a0067;font:600 12px/1 Manrope,sans-serif">{{ t.label }}</span></sc-if>
-            <sc-if value="{{ t.inactive }}"><span style="display:block;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.14);color:rgba(255,255,255,.82);font:500 12px/1 Manrope,sans-serif" style-hover="background:rgba(255,255,255,.24)">{{ t.label }}</span></sc-if>
+    <div style="position:relative;overflow:hidden;background:#3a0067;padding:52px 48px 54px;box-shadow:inset 0 -1px 0 rgba(255,255,255,.14)">
+      <!-- Background Data Center / Digital Infrastructure Imagery -->
+      <div style="position:absolute;inset:0;background:#1e0038 url(https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&amp;fit=crop&amp;w=2000&amp;q=75) right center/cover no-repeat;opacity:.32;filter:contrast(1.15) saturate(1.2)"></div>
+      <!-- Brand Royal Purple Gradient Overlays for Brand Depth & Optimal Text Contrast -->
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg, #3a0067 0%, rgba(58,0,103,.96) 42%, rgba(58,0,103,.82) 70%, rgba(58,0,103,.5) 100%)"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 82% 25%, rgba(138,43,226,.32) 0%, rgba(58,0,103,0) 65%)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,0,40,.22) 0%, rgba(58,0,103,.48) 100%)"></div>
+
+      <!-- Foreground Content Layer -->
+      <div style="position:relative;z-index:2">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;gap:32px">
+          <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:7px;height:7px;border-radius:50%;background:#00e5ff;box-shadow:0 0 10px #00e5ff"></span>
+              <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(255,255,255,.82);text-transform:uppercase">STT GDC INTERNAL</span>
+            </div>
+            <h1 style="margin:0;font:800 46px/1.08 'Plus Jakarta Sans',Manrope,sans-serif;color:#ffffff;letter-spacing:-.03em">InfoHub</h1>
+            <p style="margin:0;font:400 15px/1.6 'Plus Jakarta Sans',Manrope,sans-serif;color:rgba(255,255,255,.85);max-width:580px;text-wrap:pretty">Your central source for company news, policies, governance updates, and knowledge resources across STT GDC.</p>
           </div>
-        </sc-for>
+          <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.32);border-radius:12px;height:46px;padding:0 18px;width:320px;box-shadow:0 8px 24px rgba(0,0,0,.15);flex-shrink:0" style-hover="background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.5)">
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.85)">⌕</span>
+            <input data-onpurple="true" placeholder="Search InfoHub…" style="flex:1;border:0;outline:none;background:transparent;font:500 14px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#ffffff" />
+            <span style="font:500 10px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:3px 6px">⌘K</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <sc-for list="{{ infoTabs }}" as="t" hint-placeholder-count="5">
+            <div onClick="{{ t.on }}" style="cursor:pointer">
+              <sc-if value="{{ t.active }}" hint-placeholder-val="{{ true }}"><span style="display:inline-block;padding:9px 20px;border-radius:999px;background:#ffffff;color:#3a0067;font:700 13px/1 'Plus Jakarta Sans',Manrope,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.22);letter-spacing:.01em">{{ t.label }}</span></sc-if>
+              <sc-if value="{{ t.inactive }}"><span style="display:inline-block;padding:9px 20px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.24);color:rgba(255,255,255,.9);font:500 13px/1 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:.01em" style-hover="background:rgba(255,255,255,.26);border-color:rgba(255,255,255,.45);color:#ffffff">{{ t.label }}</span></sc-if>
+            </div>
+          </sc-for>
+        </div>
       </div>
     </div>
 

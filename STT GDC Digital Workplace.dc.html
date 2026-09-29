@@ -228,79 +228,84 @@
         <div style="height:1px;background:#ebe9e7;margin:14px 0 4px"></div>
 
         <!-- INFOHUB KNOWLEDGE & INSIGHTS (Executive Knowledge Shelf with Visual Briefings) -->
-        <div style="border:1px solid #ebdff5;border-radius:20px;background:#ffffff;box-shadow:0 6px 24px rgba(58,0,103,.04);padding:28px 28px 24px;display:flex;flex-direction:column;gap:22px">
+        <div style="border:1px solid #e9e3f0;border-radius:20px;background:#ffffff;box-shadow:0 6px 28px rgba(58,0,103,.04);padding:36px 36px 32px;display:flex;flex-direction:column;gap:28px">
           
           <!-- Header -->
-          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap">
-            <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:8px">
               <div style="display:flex;align-items:center;gap:9px">
                 <img src="logos/infohub.png" style="width:24px;height:24px;object-fit:contain" alt="InfoHub">
-                <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">INFOHUB · KNOWLEDGE REPOSITORY</span>
+                <span style="font:700 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">INFOHUB · KNOWLEDGE REPOSITORY</span>
               </div>
-              <h2 style="margin:0;font:800 25px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917">Organizational Knowledge &amp; Briefings</h2>
-              <span style="font:400 13px/1.4 'Plus Jakarta Sans',sans-serif;color:#78716c">Curated executive intelligence, operational standards, ESG benchmarks &amp; playbooks.</span>
+              <h2 style="margin:0;font:800 26px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#0f172a">Organizational Knowledge &amp; Briefings</h2>
+              <span style="font:400 13.5px/1.55 'Plus Jakarta Sans',sans-serif;color:#64748b">Curated executive intelligence, operational standards, ESG benchmarks &amp; playbooks.</span>
             </div>
-            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:7px;cursor:pointer;color:#3a0067;padding:9px 16px;border-radius:9px;background:#f0e6ff;border:1px solid #d8b4fe;transition:all .18s ease" style-hover="background:#3a0067;color:#fff;transform:translateX(2px)">
+            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:7px;cursor:pointer;color:#3a0067;padding:10px 18px;border-radius:999px;background:#f3e8ff;border:1px solid #d8b4fe;transition:all .18s ease" style-hover="background:#3a0067;color:#fff;transform:translateX(2px)">
               <span style="font:700 12.5px/1 'Plus Jakarta Sans',sans-serif">Explore InfoHub</span>
               <span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif">→</span>
             </div>
           </div>
 
           <!-- Category Quick Filter Pills -->
-          <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px">
-            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:6px;padding:7px 15px;border-radius:999px;background:#1c1917;color:#fff;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto">
+          <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:2px">
+            <div onClick="{{ goInfoHub }}" style="display:flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;background:#0f172a;color:#fff;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto">
               <span>All Knowledge</span>
             </div>
-            <div onClick="{{ goInfoStrategy }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+            <div onClick="{{ goInfoStrategy }}" style="display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;color:#475569;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;background:#fff;transform:translateY(-1px)">
               <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#3a0067">◎</span>
               <span>Strategy</span>
             </div>
-            <div onClick="{{ goInfoOperations }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+            <div onClick="{{ goInfoOperations }}" style="display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;color:#475569;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;background:#fff;transform:translateY(-1px)">
               <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#0284c7">▦</span>
               <span>Operations</span>
             </div>
-            <div onClick="{{ goInfoSustainability }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+            <div onClick="{{ goInfoSustainability }}" style="display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;color:#475569;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;background:#fff;transform:translateY(-1px)">
               <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#16a34a">◈</span>
               <span>Sustainability</span>
             </div>
-            <div onClick="{{ goInfoPeople }}" style="display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid #e7e5e4;color:#44403c;font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto" style-hover="border-color:#3a0067;color:#3a0067;background:#fbf8ff">
+            <div onClick="{{ goInfoPeople }}" style="display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;color:#475569;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;flex:0 0 auto;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;background:#fff;transform:translateY(-1px)">
               <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#9333ea">◉</span>
               <span>People</span>
             </div>
           </div>
 
-          <!-- 2x2 Knowledge Bento Grid with Rich Imagery -->
-          <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:18px">
+          <!-- 2x2 Knowledge Bento Grid with Spacious Photo-Mat Cards -->
+          <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:26px">
             <sc-for list="{{ homeInfoBriefs }}" as="b" hint-placeholder-count="4">
-              <div onClick="{{ b.onOpen }}" style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:all .22s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px);border-color:#3a0067;box-shadow:0 14px 32px rgba(58,0,103,.12)">
+              <div onClick="{{ b.onOpen }}" style="border:1px solid #e5e7eb;border-radius:18px;background:#ffffff;padding:18px 18px 20px;display:flex;flex-direction:column;cursor:pointer;transition:all .25s ease" style-hover="transform:translateY(-4px);border-color:#3a0067;box-shadow:0 18px 38px rgba(58,0,103,.1)">
                 
-                <!-- Visual Media Header with Glassmorphic Floating Badges -->
-                <div style="height:140px;position:relative;overflow:hidden;background:#1c1917">
-                  <div style="position:absolute;inset:0;background-color:#1c1917;background-image:url({{ b.img }});background-size:cover;background-position:center;transition:transform .35s ease"></div>
-                  <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.68) 100%)"></div>
+                <!-- Clean Unobstructed Photo Header with Single Subtle Category Chip -->
+                <div style="height:165px;border-radius:12px;overflow:hidden;position:relative;background:#0f172a;margin-bottom:18px">
+                  <div style="position:absolute;inset:0;background-color:#0f172a;background-image:url({{ b.img }});background-size:cover;background-position:center;transition:transform .35s ease"></div>
+                  <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%)"></div>
                   
-                  <!-- Floating category and metric tags -->
-                  <div style="position:absolute;top:10px;left:10px;right:10px;display:flex;align-items:center;justify-content:space-between;gap:8px">
-                    <span style="font:700 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;background:rgba(58,0,103,.88);color:#fff;backdrop-filter:blur(6px);padding:5px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.2)">{{ b.category }}</span>
-                    <span style="font:700 9px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;background:rgba(255,255,255,.94);color:#1c1917;padding:4px 8px;border-radius:5px;box-shadow:0 2px 6px rgba(0,0,0,.2)">{{ b.badge }}</span>
-                  </div>
-
-                  <!-- Bottom read time & type chip on image -->
-                  <div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;align-items:center;justify-content:space-between">
-                    <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.6)">{{ b.readTime }}</span>
-                    <span style="font:600 10.5px/1 'Plus Jakarta Sans',sans-serif;color:#fff;background:rgba(255,255,255,.22);backdrop-filter:blur(4px);padding:3px 8px;border-radius:4px;border:1px solid rgba(255,255,255,.25)">Briefing ↗</span>
+                  <!-- Single Elegant Category Badge in Top-Left -->
+                  <div style="position:absolute;top:12px;left:12px">
+                    <span style="font:700 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;background:rgba(58,0,103,.88);color:#fff;backdrop-filter:blur(8px);padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.2)">{{ b.category }}</span>
                   </div>
                 </div>
 
-                <!-- Text & Metadata Section -->
-                <div style="padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1">
-                  <h4 style="margin:0;font:700 15px/1.32 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;color:#1c1917">{{ b.title }}</h4>
-                  <p style="margin:0;font:400 12.5px/1.5 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ b.summary }}</p>
+                <!-- Structured Content Area with Generous Whitespace -->
+                <div style="display:flex;flex-direction:column;flex:1">
                   
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:11px;border-top:1px solid #f4f4f3;margin-top:auto">
-                    <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e">{{ b.dept }}</span>
-                    <span style="font:700 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">Read document →</span>
+                  <!-- Metadata Row: Read Time + Milestone Metric -->
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px">
+                    <span style="font:500 12px/1 'Plus Jakarta Sans',sans-serif;color:#64748b">{{ b.readTime }} · {{ b.dept }}</span>
+                    <span style="font:700 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;background:#f1f5f9;color:#334155;border:1px solid #e2e8f0;padding:4px 8px;border-radius:5px">{{ b.badge }}</span>
                   </div>
+
+                  <!-- Title -->
+                  <h4 style="margin:0 0 10px;font:700 16px/1.38 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.02em;color:#0f172a;min-height:44px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ b.title }}</h4>
+                  
+                  <!-- Summary -->
+                  <p style="margin:0 0 18px;font:400 13px/1.6 'Plus Jakarta Sans',Manrope,sans-serif;color:#475569;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1">{{ b.summary }}</p>
+                  
+                  <!-- Footer Action Row -->
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid #f1f5f9;margin-top:auto">
+                    <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#94a3b8">EXECUTIVE BRIEF</span>
+                    <span style="font:700 12.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;display:flex;align-items:center;gap:5px" style-hover="text-decoration:underline">Read document →</span>
+                  </div>
+
                 </div>
 
               </div>
@@ -308,17 +313,17 @@
           </div>
 
           <!-- Quick Repository Launcher Strip -->
-          <div style="border:1px solid #e7e5e4;border-radius:12px;background:linear-gradient(135deg, #faf5ff 0%, #fff 100%);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <div style="display:flex;align-items:center;gap:10px">
-              <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#3a0067">KEY POLICIES:</span>
+          <div style="border:1px solid #ebdff5;border-radius:14px;background:linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:4px">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span style="font:700 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#3a0067">KEY POLICIES:</span>
               <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">InfoSec v4.2</span>
-                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Travel Guidelines</span>
-                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Hybrid Framework</span>
-                <span onClick="{{ goInfoHub }}" style="font:500 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#44403c;background:#fff;border:1px solid #e7e5e4;padding:5px 10px;border-radius:6px;cursor:pointer" style-hover="border-color:#3a0067;color:#3a0067">Data Classification</span>
+                <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#334155;background:#fff;border:1px solid #e2e8f0;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;box-shadow:0 2px 6px rgba(58,0,103,.08)">InfoSec v4.2</span>
+                <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#334155;background:#fff;border:1px solid #e2e8f0;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;box-shadow:0 2px 6px rgba(58,0,103,.08)">Travel Guidelines</span>
+                <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#334155;background:#fff;border:1px solid #e2e8f0;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;box-shadow:0 2px 6px rgba(58,0,103,.08)">Hybrid Framework</span>
+                <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#334155;background:#fff;border:1px solid #e2e8f0;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .18s ease" style-hover="border-color:#3a0067;color:#3a0067;box-shadow:0 2px 6px rgba(58,0,103,.08)">Data Classification</span>
               </div>
             </div>
-            <span onClick="{{ goInfoHub }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer;white-space:nowrap" style-hover="text-decoration:underline">Search 200+ docs in InfoHub →</span>
+            <span onClick="{{ goInfoHub }}" style="font:700 12px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer;white-space:nowrap" style-hover="text-decoration:underline">Search 200+ docs in InfoHub →</span>
           </div>
 
         </div>

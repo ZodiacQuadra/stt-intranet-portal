@@ -745,8 +745,9 @@
           </div>
           <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.32);border-radius:12px;height:46px;padding:0 18px;width:320px;box-shadow:0 8px 24px rgba(0,0,0,.15);flex-shrink:0" style-hover="background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.5)">
             <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.85)">⌕</span>
-            <input data-onpurple="true" placeholder="Search InfoHub…" style="flex:1;border:0;outline:none;background:transparent;font:500 14px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#ffffff" />
-            <span style="font:500 10px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:3px 6px">⌘K</span>
+            <input data-onpurple="true" value="{{ infoQ }}" onChange="{{ onInfoQ }}" onInput="{{ onInfoQ }}" placeholder="Search InfoHub…" style="flex:1;border:0;outline:none;background:transparent;font:500 14px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#ffffff" />
+            <sc-if value="{{ hasInfoQ }}"><span onClick="{{ clearInfoQ }}" style="cursor:pointer;color:rgba(255,255,255,.9);font:600 13px/1 'Plus Jakarta Sans',sans-serif;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.2)" title="Clear">✕</span></sc-if>
+            <sc-if value="{{ noInfoQ }}"><span style="font:500 10px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:3px 6px">⌘K</span></sc-if>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -767,24 +768,24 @@
       <div style="display:flex;flex-direction:column;gap:36px">
 
         <!-- Featured Article -->
-        <div style="border-radius:16px;overflow:hidden;border:1px solid #e7e5e4;background:#fff;cursor:pointer" style-hover="box-shadow:0 16px 40px rgba(0,0,0,.08)">
+        <div style="border-radius:16px;overflow:hidden;border:1px solid #e7e5e4;background:#fff;cursor:pointer;transition:all .22s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px);box-shadow:0 20px 45px rgba(58,0,103,.12);border-color:#d8b4fe">
           <div style="height:280px;background:#1c1917 url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1400&amp;q=70) center/cover no-repeat;position:relative">
-            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.08) 0%,rgba(10,10,10,.7) 100%)"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.08) 0%,rgba(10,10,10,.72) 100%)"></div>
             <div style="position:absolute;bottom:28px;left:28px;display:flex;align-items:center;gap:10px">
-              <span style="background:#3a0067;color:#fff;font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 12px;border-radius:4px">FEATURED</span>
-              <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.78)">STRATEGY · 3 SEP 2026</span>
+              <span style="background:#3a0067;color:#fff;font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 12px;border-radius:5px;box-shadow:0 2px 8px rgba(0,0,0,.3)">FEATURED</span>
+              <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:rgba(255,255,255,.85)">STRATEGY · 3 SEP 2026</span>
             </div>
           </div>
           <div style="padding:30px 32px 34px;display:flex;flex-direction:column;gap:14px">
-            <h2 style="margin:0;font:700 28px/1.2 Manrope,sans-serif;letter-spacing:-.025em;text-wrap:pretty">Capacity crosses 1.7 GW as Navi Mumbai DC4 goes live</h2>
-            <p style="margin:0;font:400 15px/1.65 Manrope,sans-serif;color:#57534e;text-wrap:pretty">The new campus adds 48 MW of contracted capacity and becomes the group's first site running entirely on a contracted renewable pool. With this milestone, STT GDC now operates across 12 markets with over 60 data centres.</p>
+            <h2 style="margin:0;font:800 28px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917;text-wrap:pretty">Capacity crosses 1.7 GW as Navi Mumbai DC4 goes live</h2>
+            <p style="margin:0;font:400 15px/1.65 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e;text-wrap:pretty">The new campus adds 48 MW of contracted capacity and becomes the group's first site running entirely on a contracted renewable pool. With this milestone, STT GDC now operates across 12 markets with over 60 data centres.</p>
             <div style="display:flex;align-items:center;gap:14px;padding-top:4px">
-              <div style="width:34px;height:34px;border-radius:50%;flex:0 0 auto;background:#e7e5e4 url(https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;q=70) center/cover no-repeat"></div>
+              <div style="width:36px;height:36px;border-radius:50%;flex:0 0 auto;border:1.5px solid #d8b4fe;background:#e7e5e4 url(https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;q=70) center/cover no-repeat"></div>
               <div style="display:flex;flex-direction:column;gap:2px">
-                <span style="font:600 13px/1 Manrope,sans-serif">Bruno Lopez</span>
-                <span style="font:400 11px/1 Manrope,sans-serif;color:#a8a29e">President &amp; Group CEO · 5 min read</span>
+                <span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif;color:#1c1917">Bruno Lopez</span>
+                <span style="font:500 11px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#78716c">President &amp; Group CEO · 5 min read</span>
               </div>
-              <span style="margin-left:auto;font:600 12px/1 Manrope,sans-serif;color:#3a0067;cursor:pointer">Read more →</span>
+              <span style="margin-left:auto;font:700 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer" style-hover="text-decoration:underline">Read more →</span>
             </div>
           </div>
         </div>
@@ -792,49 +793,64 @@
         <!-- Latest Articles label + grid -->
         <div style="display:flex;align-items:flex-end;justify-content:space-between">
           <div style="display:flex;flex-direction:column;gap:7px">
-            <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">LATEST ARTICLES</span>
-            <h2 style="margin:0;font:700 24px/1.15 Manrope,sans-serif;letter-spacing:-.02em">Recent from InfoHub</h2>
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">LATEST ARTICLES</span>
+            <h2 style="margin:0;font:800 24px/1.15 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917">Recent from InfoHub</h2>
           </div>
-          <span style="font:600 12px/1 Manrope,sans-serif;color:#3a0067;cursor:pointer">All articles →</span>
+          <div style="display:flex;align-items:center;gap:14px">
+            <sc-if value="{{ hasInfoQ }}"><span onClick="{{ clearInfoQ }}" style="font:600 12px/1 'Plus Jakarta Sans',sans-serif;color:#e11d48;cursor:pointer">Clear search</span></sc-if>
+            <span onClick="{{ resetInfoFilter }}" style="font:600 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer" style-hover="text-decoration:underline">All articles →</span>
+          </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-          <sc-for list="{{ infoArticles }}" as="a" hint-placeholder-count="6">
-            <div style="border:1px solid #e7e5e4;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column;cursor:pointer" style-hover="box-shadow:0 14px 34px rgba(0,0,0,.09)">
-              <div style="height:140px;overflow:hidden;position:relative">
-                <div style="position:absolute;inset:0;background-color:#e7e5e4;background-image:url({{ a.img }});background-size:cover;background-position:center"></div>
+        <!-- Empty state when no articles match filter/search -->
+        <sc-if value="{{ noArticles }}">
+          <div style="padding:48px 24px;border:1px dashed #d6d3d1;border-radius:16px;background:#fafaf9;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+            <span style="font:400 28px/1 'IBM Plex Mono',monospace;color:#a8a29e">⌕</span>
+            <span style="font:700 16px/1.3 'Plus Jakarta Sans',sans-serif;color:#1c1917">No articles found</span>
+            <p style="margin:0;font:400 13px/1.5 'Plus Jakarta Sans',sans-serif;color:#78716c;max-width:360px">No articles match your current category filter or search query. Try selecting another tab or resetting filters.</p>
+            <span onClick="{{ resetInfoFilter }}" style="margin-top:4px;padding:9px 20px;border-radius:999px;background:#3a0067;color:#fff;font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer" style-hover="background:#2a004a">Show all articles</span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ hasArticles }}">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+            <sc-for list="{{ infoArticles }}" as="a" hint-placeholder-count="6">
+              <div style="border:1px solid #e7e5e4;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;cursor:pointer;transition:all .22s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(58,0,103,.12);border-color:#d8b4fe">
+                <div style="height:150px;overflow:hidden;position:relative;background:#1c1917">
+                  <div style="position:absolute;inset:0;background-color:#e7e5e4;background-image:url({{ a.img }});background-size:cover;background-position:center;transition:transform .35s ease"></div>
+                </div>
+                <div style="padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1">
+                  <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#3a0067;background:#f0e6ff;padding:4px 8px;border-radius:4px;align-self:flex-start">{{ a.tag }}</span>
+                  <h3 style="margin:0;font:700 15px/1.35 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;text-wrap:pretty;color:#1c1917">{{ a.title }}</h3>
+                  <p style="margin:0;font:400 12.5px/1.55 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e;text-wrap:pretty;flex:1">{{ a.excerpt }}</p>
+                  <span style="font:500 11px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#a8a29e;padding-top:10px;border-top:1px solid #f4f4f3;margin-top:4px">{{ a.meta }}</span>
+                </div>
               </div>
-              <div style="padding:18px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1">
-                <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#3a0067">{{ a.tag }}</span>
-                <span style="font:700 14px/1.35 Manrope,sans-serif;letter-spacing:-.01em;text-wrap:pretty">{{ a.title }}</span>
-                <span style="font:400 12px/1.5 Manrope,sans-serif;color:#78716c;text-wrap:pretty;flex:1">{{ a.excerpt }}</span>
-                <span style="font:500 11px/1 Manrope,sans-serif;color:#a8a29e;padding-top:8px;border-top:1px solid #f4f4f3;margin-top:4px">{{ a.meta }}</span>
-              </div>
-            </div>
-          </sc-for>
-        </div>
+            </sc-for>
+          </div>
+        </sc-if>
 
         <!-- Policy & Governance -->
         <div style="display:flex;flex-direction:column;gap:18px">
           <div style="display:flex;align-items:flex-end;justify-content:space-between">
             <div style="display:flex;flex-direction:column;gap:7px">
-              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">GOVERNANCE</span>
-              <h2 style="margin:0;font:700 24px/1.15 Manrope,sans-serif;letter-spacing:-.02em">Policy &amp; Governance Updates</h2>
+              <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">GOVERNANCE</span>
+              <h2 style="margin:0;font:800 24px/1.15 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.025em;color:#1c1917">Policy &amp; Governance Updates</h2>
             </div>
-            <span style="font:600 12px/1 Manrope,sans-serif;color:#3a0067;cursor:pointer">Policy Library →</span>
+            <span style="font:600 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer" style-hover="text-decoration:underline">Policy Library →</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:12px">
             <sc-for list="{{ infoHubPolicies }}" as="p" hint-placeholder-count="4">
-              <div style="border:1px solid #e7e5e4;border-radius:12px;background:#fff;padding:20px 22px;display:flex;align-items:flex-start;gap:16px;cursor:pointer" style-hover="border-color:#3a0067;box-shadow:0 4px 14px rgba(58,0,103,.08)">
+              <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;padding:20px 22px;display:flex;align-items:flex-start;gap:16px;cursor:pointer;transition:all .2s ease" style-hover="transform:translateX(4px);border-color:#3a0067;box-shadow:0 6px 20px rgba(58,0,103,.08)">
                 <div style="width:40px;height:40px;border-radius:10px;background:#f0e6ff;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font:500 14px/1 'IBM Plex Mono',monospace;color:#3a0067">▸</div>
-                <div style="display:flex;flex-direction:column;gap:5px;flex:1;min-width:0">
+                <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
                   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-                    <span style="font:700 14px/1.3 Manrope,sans-serif;color:#1c1917">{{ p.title }}</span>
-                    <sc-if value="{{ p.urgent }}"><span style="font:600 9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;background:#fef2f2;color:#dc2626;padding:4px 8px;border-radius:4px">ACTION REQUIRED</span></sc-if>
+                    <span style="font:700 14px/1.35 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917">{{ p.title }}</span>
+                    <sc-if value="{{ p.urgent }}"><span style="font:700 9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;background:#fef2f2;color:#dc2626;border:1px solid #fee2e2;padding:4px 8px;border-radius:5px">ACTION REQUIRED</span></sc-if>
                   </div>
-                  <span style="font:400 12px/1.5 Manrope,sans-serif;color:#78716c">{{ p.meta }}</span>
+                  <span style="font:400 12.5px/1.55 'Plus Jakarta Sans',Manrope,sans-serif;color:#57534e">{{ p.meta }}</span>
                 </div>
-                <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e;flex:0 0 auto">{{ p.date }}</span>
+                <span style="font:600 11px/1 'IBM Plex Mono',monospace;color:#78716c;flex:0 0 auto">{{ p.date }}</span>
               </div>
             </sc-for>
           </div>
@@ -846,52 +862,49 @@
       <div style="display:flex;flex-direction:column;gap:22px">
 
         <!-- Quick Links -->
-        <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden">
+        <div style="border:1px solid #e7e5e4;border-radius:16px;background:#fff;overflow:hidden">
           <div style="padding:20px 22px 14px">
-            <span style="font:700 15px/1 Manrope,sans-serif;letter-spacing:-.01em">Quick Links</span>
+            <span style="font:700 16px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;color:#1c1917">Quick Links</span>
           </div>
           <div style="padding:0 22px 18px;display:flex;flex-direction:column;gap:2px">
             <sc-for list="{{ infoQuickLinks }}" as="l" hint-placeholder-count="5">
-              <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f4f4f3;cursor:pointer" style-hover="opacity:.75">
-                <span style="width:30px;height:30px;border-radius:8px;background:#f0e6ff;flex:0 0 auto;font:400 13px/30px 'IBM Plex Mono',monospace;color:#3a0067;text-align:center">{{ l.icon }}</span>
-                <span style="font:600 13px/1.2 Manrope,sans-serif;color:#1c1917;flex:1">{{ l.label }}</span>
-                <span style="font:400 12px/1 Manrope,sans-serif;color:#3a0067">→</span>
+              <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #f4f4f3;cursor:pointer;transition:all .18s ease" style-hover="transform:translateX(4px);opacity:.85">
+                <span style="width:32px;height:32px;border-radius:8px;background:#f0e6ff;flex:0 0 auto;font:400 13px/32px 'IBM Plex Mono',monospace;color:#3a0067;text-align:center">{{ l.icon }}</span>
+                <span style="font:600 13px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917;flex:1">{{ l.label }}</span>
+                <span style="font:600 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">→</span>
               </div>
             </sc-for>
           </div>
         </div>
 
         <!-- Categories -->
-        <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden">
+        <div style="border:1px solid #e7e5e4;border-radius:16px;background:#fff;overflow:hidden">
           <div style="padding:20px 22px 14px">
-            <span style="font:700 15px/1 Manrope,sans-serif;letter-spacing:-.01em">Browse by Category</span>
+            <span style="font:700 16px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;color:#1c1917">Browse by Category</span>
           </div>
           <div style="padding:0 22px 18px;display:flex;flex-direction:column;gap:10px">
             <sc-for list="{{ infoCategories }}" as="c" hint-placeholder-count="6">
-              <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 12px;border-radius:9px;border:1px solid #f0efee" style-hover="border-color:#3a0067;background:#f0e6ff">
-                <div style="display:flex;align-items:center;gap:10px">
-                  <span style="font:400 14px/1 'IBM Plex Mono',monospace;color:#3a0067">{{ c.icon }}</span>
-                  <span style="font:600 13px/1 Manrope,sans-serif;color:#1c1917">{{ c.name }}</span>
-                </div>
-                <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e;background:#f5f5f4;padding:4px 8px;border-radius:4px">{{ c.count }}</span>
+              <div onClick="{{ c.on }}" style="cursor:pointer">
+                <sc-if value="{{ c.active }}"><div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:10px;border:1.5px solid #3a0067;background:#f0e6ff"><div style="display:flex;align-items:center;gap:10px"><span style="font:400 14px/1 'IBM Plex Mono',monospace;color:#3a0067">{{ c.icon }}</span><span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">{{ c.name }}</span></div><span style="font:600 11px/1 'IBM Plex Mono',monospace;color:#3a0067;background:#fff;padding:4px 8px;border-radius:4px;border:1px solid #d8b4fe">{{ c.count }}</span></div></sc-if>
+                <sc-if value="{{ c.inactive }}"><div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:10px;border:1px solid #f0efee;transition:all .18s ease" style-hover="border-color:#3a0067;background:#f0e6ff;transform:translateX(3px)"><div style="display:flex;align-items:center;gap:10px"><span style="font:400 14px/1 'IBM Plex Mono',monospace;color:#3a0067">{{ c.icon }}</span><span style="font:600 13px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917">{{ c.name }}</span></div><span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a8a29e;background:#f5f5f4;padding:4px 8px;border-radius:4px">{{ c.count }}</span></div></sc-if>
               </div>
             </sc-for>
           </div>
         </div>
 
         <!-- Most Read -->
-        <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden">
+        <div style="border:1px solid #e7e5e4;border-radius:16px;background:#fff;overflow:hidden">
           <div style="padding:20px 22px 10px;display:flex;align-items:center;justify-content:space-between">
-            <span style="font:700 15px/1 Manrope,sans-serif;letter-spacing:-.01em">Most Read This Week</span>
-            <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#a8a29e">TRENDING</span>
+            <span style="font:700 16px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.015em;color:#1c1917">Most Read This Week</span>
+            <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#a8a29e">TRENDING</span>
           </div>
           <div style="padding:0 22px 18px;display:flex;flex-direction:column">
             <sc-for list="{{ infoTrending }}" as="t" hint-placeholder-count="4">
-              <div style="display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid #f4f4f3;cursor:pointer" style-hover="opacity:.75">
-                <span style="font:800 22px/1 Manrope,sans-serif;color:#e7e5e4;flex:0 0 26px">{{ t.rank }}</span>
-                <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-                  <span style="font:600 13px/1.35 Manrope,sans-serif;color:#1c1917;text-wrap:pretty">{{ t.title }}</span>
-                  <span style="font:400 11px/1 Manrope,sans-serif;color:#a8a29e">{{ t.meta }}</span>
+              <div style="display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid #f4f4f3;cursor:pointer;transition:all .18s ease" style-hover="transform:translateX(4px);opacity:.85">
+                <span style="font:800 24px/1 'Plus Jakarta Sans',sans-serif;color:#a855f7;flex:0 0 26px;line-height:1">{{ t.rank }}</span>
+                <div style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 13px/1.35 'Plus Jakarta Sans',Manrope,sans-serif;color:#1c1917;text-wrap:pretty">{{ t.title }}</span>
+                  <span style="font:500 11px/1 'Plus Jakarta Sans',Manrope,sans-serif;color:#a8a29e">{{ t.meta }}</span>
                 </div>
               </div>
             </sc-for>
@@ -899,12 +912,13 @@
         </div>
 
         <!-- Newsletter signup -->
-        <div style="border-radius:14px;background:#3a0067;padding:24px;display:flex;flex-direction:column;gap:14px">
-          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(255,255,255,.65)">INFOHUB DIGEST</span>
-          <p style="margin:0;font:600 16px/1.45 Manrope,sans-serif;color:#fff">Get the weekly InfoHub digest delivered to your inbox.</p>
+        <div style="border-radius:16px;background:linear-gradient(145deg, #3a0067 0%, #20003b 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 28px rgba(58,0,103,.24);position:relative;overflow:hidden;padding:26px;display:flex;flex-direction:column;gap:14px">
+          <div style="position:absolute;top:-30px;right:-30px;width:110px;height:110px;border-radius:50%;background:rgba(168,85,247,.22);filter:blur(24px);pointer-events:none"></div>
+          <span style="font:600 10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(255,255,255,.75)">INFOHUB DIGEST</span>
+          <p style="margin:0;font:700 16px/1.4 'Plus Jakarta Sans',Manrope,sans-serif;color:#fff">Get the weekly InfoHub digest delivered to your inbox.</p>
           <div style="display:flex;gap:8px">
-            <span style="flex:1;display:block;text-align:center;padding:12px 0;border-radius:8px;background:#fff;color:#3a0067;font:700 13px/1 Manrope,sans-serif;cursor:pointer" style-hover="background:#f0e6ff">Subscribe</span>
-            <span style="display:block;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.8);font:500 12px/1 Manrope,sans-serif;cursor:pointer" style-hover="background:rgba(255,255,255,.1)">Manage</span>
+            <span style="flex:1;display:block;text-align:center;padding:12px 0;border-radius:8px;background:#fff;color:#3a0067;font:700 13px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .18s ease" style-hover="background:#f0e6ff;box-shadow:0 6px 16px rgba(0,0,0,.2)">Subscribe</span>
+            <span style="display:block;padding:12px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.85);font:600 12px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:all .18s ease" style-hover="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)">Manage</span>
           </div>
         </div>
 
@@ -1259,6 +1273,13 @@ class Component extends DCLogic {
         { stat: '4th', label: 'LEED Gold facility in India' }
       ],
 
+      infoQ: st.infoQ || '',
+      onInfoQ: (e) => this.setState({ infoQ: e.target.value }),
+      clearInfoQ: () => this.setState({ infoQ: '' }),
+      hasInfoQ: Boolean(st.infoQ && st.infoQ.trim()),
+      noInfoQ: !Boolean(st.infoQ && st.infoQ.trim()),
+      resetInfoFilter: () => this.setState({ infoTab: 'All', infoQ: '' }),
+
       infoTabs: ['All', 'Strategy', 'People', 'Operations', 'Sustainability', 'Governance'].map(label => ({
         label,
         active: (st.infoTab || 'All') === label,
@@ -1266,14 +1287,37 @@ class Component extends DCLogic {
         on: () => this.setState({ infoTab: label })
       })),
 
-      infoArticles: [
-        { img: U('1522071820081-009f0129c71c', 900), tag: 'PEOPLE', title: 'Graduate cohort 2026 joins across six markets', excerpt: 'Over 140 graduates started across Singapore, India, UK, and ASEAN as part of the group\'s largest-ever intake.', meta: 'HR · 2 Sep · 3 min read' },
-        { img: U('1497366754035-f200968a6e72', 900), tag: 'COMMERCIAL', title: 'Hyperscale deal signed for Johor phase two', excerpt: 'A major hyperscaler has committed to 32 MW across two halls, making Johor our highest-utilisation campus.', meta: 'Commercial · 1 Sep · 4 min read' },
-        { img: U('1509391366360-2e959784a276', 900), tag: 'SUSTAINABILITY', title: 'Water reuse programme hits 60% target early', excerpt: 'The cooling optimisation initiative has reduced potable water draw by 60% across five India sites ahead of schedule.', meta: 'ESG · 29 Aug · 5 min read' },
-        { img: U('1451187580459-43490279c0fa', 900), tag: 'TECHNOLOGY', title: 'DCIM rollout completes across ASEAN corridor', excerpt: 'Real-time asset and power monitoring is now live across 14 data centres in the ASEAN corridor.', meta: 'Technology · 26 Aug · 3 min read' },
-        { img: U('1558494949-ef010cbdcc31', 900), tag: 'OPERATIONS', title: 'Mumbai DC3 achieves LEED Gold certification', excerpt: 'The certification recognises best-in-class energy and water efficiency, making DC3 our fourth LEED Gold site.', meta: 'Facilities · 24 Aug · 2 min read' },
-        { img: U('1519861531473-9200262188bf', 900), tag: 'EVENTS', title: '[AD]VANTAGE 2026 registration now open', excerpt: '340 colleagues have already registered for this year\'s flagship leadership conference in Goa.', meta: 'Events · 20 Aug · 2 min read' }
-      ],
+      ...(() => {
+        const tab = st.infoTab || 'All';
+        const q = (st.infoQ || '').trim().toLowerCase();
+        const articles = [
+          { img: U('1522071820081-009f0129c71c', 900), tag: 'PEOPLE', title: 'Graduate cohort 2026 joins across six markets', excerpt: 'Over 140 graduates started across Singapore, India, UK, and ASEAN as part of the group\'s largest-ever intake.', meta: 'HR · 2 Sep · 3 min read' },
+          { img: U('1497366754035-f200968a6e72', 900), tag: 'COMMERCIAL', title: 'Hyperscale deal signed for Johor phase two', excerpt: 'A major hyperscaler has committed to 32 MW across two halls, making Johor our highest-utilisation campus.', meta: 'Commercial · 1 Sep · 4 min read' },
+          { img: U('1509391366360-2e959784a276', 900), tag: 'SUSTAINABILITY', title: 'Water reuse programme hits 60% target early', excerpt: 'The cooling optimisation initiative has reduced potable water draw by 60% across five India sites ahead of schedule.', meta: 'ESG · 29 Aug · 5 min read' },
+          { img: U('1518770660439-4636190af475', 900), tag: 'TECHNOLOGY', title: 'DCIM rollout completes across ASEAN corridor', excerpt: 'Real-time asset and power monitoring is now live across 14 data centres in the ASEAN corridor.', meta: 'Technology · 26 Aug · 3 min read' },
+          { img: U('1558494949-ef010cbdcc31', 900), tag: 'OPERATIONS', title: 'Mumbai DC3 achieves LEED Gold certification', excerpt: 'The certification recognises best-in-class energy and water efficiency, making DC3 our fourth LEED Gold site.', meta: 'Facilities · 24 Aug · 2 min read' },
+          { img: U('1519861531473-9200262188bf', 900), tag: 'STRATEGY', title: '[AD]VANTAGE 2026 registration now open', excerpt: '340 colleagues have already registered for this year\'s flagship leadership conference in Goa.', meta: 'Strategy · 20 Aug · 2 min read' }
+        ];
+
+        const filtered = articles.filter(a => {
+          const matchTab = tab === 'All' 
+            || a.tag.toUpperCase() === tab.toUpperCase()
+            || (tab === 'Strategy' && (a.tag === 'COMMERCIAL' || a.tag === 'STRATEGY' || a.tag === 'TECHNOLOGY'))
+            || (tab === 'Governance' && (a.tag === 'GOVERNANCE' || a.tag === 'OPERATIONS'));
+          const matchQ = !q
+            || a.title.toLowerCase().includes(q)
+            || a.excerpt.toLowerCase().includes(q)
+            || a.tag.toLowerCase().includes(q);
+          return matchTab && matchQ;
+        });
+
+        return {
+          infoArticles: filtered,
+          hasArticles: filtered.length > 0,
+          noArticles: filtered.length === 0,
+          infoArticlesCount: filtered.length
+        };
+      })(),
 
       infoHubPolicies: [
         { title: 'Information Security Policy v4.2', meta: 'Mandatory acknowledgement for all employees and contractors. Read and sign before 11 Sep.', date: '11 SEP', urgent: true },
@@ -1291,13 +1335,18 @@ class Component extends DCLogic {
       ],
 
       infoCategories: [
-        { icon: '◎', name: 'Strategy & Leadership', count: '48' },
-        { icon: '◉', name: 'People & Culture', count: '62' },
-        { icon: '▦', name: 'Operations & Facilities', count: '34' },
-        { icon: '⊡', name: 'Governance & Policy', count: '27' },
-        { icon: '◈', name: 'Sustainability & ESG', count: '19' },
-        { icon: '⊕', name: 'Technology & Innovation', count: '41' }
-      ],
+        { icon: '◎', name: 'Strategy & Leadership', tab: 'Strategy', count: '48' },
+        { icon: '◉', name: 'People & Culture', tab: 'People', count: '62' },
+        { icon: '▦', name: 'Operations & Facilities', tab: 'Operations', count: '34' },
+        { icon: '⊡', name: 'Governance & Policy', tab: 'Governance', count: '27' },
+        { icon: '◈', name: 'Sustainability & ESG', tab: 'Sustainability', count: '19' },
+        { icon: '⊕', name: 'Technology & Innovation', tab: 'All', count: '41' }
+      ].map(c => ({
+        ...c,
+        active: (st.infoTab || 'All') === c.tab,
+        inactive: (st.infoTab || 'All') !== c.tab,
+        on: () => this.setState({ infoTab: c.tab })
+      })),
 
       infoTrending: [
         { rank: '1', title: 'Capacity crosses 1.7 GW as Navi Mumbai DC4 goes live', meta: 'Strategy · 3 Sep · 8.4k views' },

@@ -330,31 +330,6 @@
 
         <div style="height:1px;background:#ebe9e7;margin:14px 0 4px"></div>
 
-        <div style="display:flex;align-items:flex-end;justify-content:space-between">
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#3a0067">MY APPS</span>
-            <h2 style="margin:0;font:700 27px/1.15 Manrope,sans-serif;letter-spacing:-.02em">Jump back into your tools</h2>
-          </div>
-          <span onClick="{{ goApps }}" style="font:600 12px/1 Manrope,sans-serif;color:#3a0067;cursor:pointer">Open Apps Hub →</span>
-        </div>
-
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
-          <sc-for list="{{ homeApps }}" as="a" hint-placeholder-count="10">
-            <div onClick="{{ goApps }}" style="border:1px solid #e7e5e4;border-radius:12px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;gap:11px;background:#fff;cursor:pointer;position:relative" style-hover="border-color:#d6d3d1;box-shadow:0 10px 26px rgba(0,0,0,.07)">
-              <sc-if value="{{ a.hasLogo }}" hint-placeholder-val="{{ true }}">
-                <div style="width:46px;height:46px;border-radius:11px;background-color:#fff;border:1px solid #f0efee;background-image:url({{ a.logo }});background-size:{{ a.logoSize }};background-position:center;background-repeat:no-repeat"></div>
-              </sc-if>
-              <sc-if value="{{ a.noLogo }}">
-                <div style="width:46px;height:46px;border-radius:11px;background:{{ a.bg }};display:flex;align-items:center;justify-content:center;font:700 14px/1 Manrope,sans-serif;color:#fff">{{ a.mark }}</div>
-              </sc-if>
-              <span style="font:600 12px/1.25 Manrope,sans-serif;color:#44403c;text-align:center">{{ a.label }}</span>
-              <sc-if value="{{ a.fav }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:9px;right:11px;font:400 11px/1 Manrope,sans-serif;color:#3a0067">★</span></sc-if>
-            </div>
-          </sc-for>
-        </div>
-
-        <div style="height:1px;background:#ebe9e7;margin:14px 0 4px"></div>
-
         <div style="display:grid;grid-template-columns:1fr;gap:20px;align-items:start">
 
           <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column">
@@ -490,6 +465,37 @@
               <span style="font:600 13px/1 Manrope,sans-serif;color:#fff">Bruno Lopez</span>
               <span style="font:400 11px/1 Manrope,sans-serif;color:rgba(255,255,255,.6)">President &amp; Group CEO</span>
             </div>
+          </div>
+        </div>
+
+        <!-- MY APPS (2 apps per row) -->
+        <div style="border:1px solid #e7e5e4;border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column">
+          <div style="padding:20px 22px 14px;display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#3a0067">MY APPS</span>
+              <span style="font:700 17px/1.2 'Plus Jakarta Sans',Manrope,sans-serif;letter-spacing:-.01em;color:#1c1917">Jump back into your tools</span>
+            </div>
+            <span onClick="{{ goApps }}" style="font:600 11.5px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067;cursor:pointer" style-hover="text-decoration:underline">Apps Hub →</span>
+          </div>
+
+          <div style="padding:0 20px 18px;display:grid;grid-template-columns:repeat(2, 1fr);gap:11px">
+            <sc-for list="{{ homeApps }}" as="a" hint-placeholder-count="10">
+              <div onClick="{{ goApps }}" style="border:1px solid #f0efee;border-radius:12px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:9px;background:#fafaf9;cursor:pointer;position:relative;transition:all .18s ease" style-hover="background:#fff;border-color:#3a0067;box-shadow:0 6px 18px rgba(58,0,103,.08);transform:translateY(-2px)">
+                <sc-if value="{{ a.hasLogo }}" hint-placeholder-val="{{ true }}">
+                  <div style="width:42px;height:42px;border-radius:10px;background-color:#fff;border:1px solid #e7e5e4;background-image:url({{ a.logo }});background-size:{{ a.logoSize }};background-position:center;background-repeat:no-repeat"></div>
+                </sc-if>
+                <sc-if value="{{ a.noLogo }}">
+                  <div style="width:42px;height:42px;border-radius:10px;background:{{ a.bg }};display:flex;align-items:center;justify-content:center;font:700 13px/1 Manrope,sans-serif;color:#fff">{{ a.mark }}</div>
+                </sc-if>
+                <span style="font:600 12px/1.25 'Plus Jakarta Sans',Manrope,sans-serif;color:#44403c;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%">{{ a.label }}</span>
+                <sc-if value="{{ a.fav }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:7px;right:9px;font:400 10px/1 Manrope,sans-serif;color:#3a0067">★</span></sc-if>
+              </div>
+            </sc-for>
+          </div>
+
+          <div onClick="{{ goApps }}" style="padding:13px 22px;background:#fafaf9;border-top:1px solid #f4f4f3;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all .18s ease" style-hover="background:#f5f5f4">
+            <span style="font:600 12px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">View all applications</span>
+            <span style="font:700 13px/1 'Plus Jakarta Sans',sans-serif;color:#3a0067">→</span>
           </div>
         </div>
 
